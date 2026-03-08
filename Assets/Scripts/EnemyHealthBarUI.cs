@@ -12,9 +12,13 @@ public class EnemyHealthBarUI : MonoBehaviour
 
     Health health;
 
+    Camera mainCam;
+
     void Start()
     {
         health = enemy.GetComponent<Health>();
+
+        mainCam = Camera.main;
 
         UpdateHealthBar();
     }
@@ -28,7 +32,7 @@ public class EnemyHealthBarUI : MonoBehaviour
     void UpdatePosition()
     {
         Vector3 worldPosition = enemy.position + offset;
-        Vector3 screenPosition = Camera.main.WorldToScreenPoint(worldPosition);
+        Vector3 screenPosition = mainCam.WorldToScreenPoint(worldPosition);
 
         transform.position = screenPosition;
     }

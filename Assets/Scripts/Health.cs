@@ -13,6 +13,7 @@ public class Health : MonoBehaviour
 
     Animator animator;
 
+    public UnityEvent onDeath;
     public bool iFrame {  get; set; }
 
     void Start()
@@ -46,6 +47,8 @@ public class Health : MonoBehaviour
 
         if (currentHealth == 0)
         {
+            onDeath?.Invoke();
+
             animator.SetBool("isMoving", false);
             animator.SetTrigger("isDead");
             if (gameObject.tag == "Player")
@@ -59,6 +62,7 @@ public class Health : MonoBehaviour
                 GetComponent<EnemyMovement>().enabled = false;
             }
             GetComponent<CapsuleCollider2D>().enabled = false;
+
             Destroy(gameObject, 1.0f);
             Destroy(healthBar);
 

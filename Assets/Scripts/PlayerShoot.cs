@@ -16,9 +16,12 @@ public class PlayerShoot : MonoBehaviour
     bool continuousShoot;
     bool singleShot;
 
+    Camera mainCam;
+
     void Start()
     {
-        animator = GetComponent<Animator>();    
+        animator = GetComponent<Animator>();
+        mainCam = Camera.main;
     }
     
     void Update()
@@ -42,7 +45,7 @@ public class PlayerShoot : MonoBehaviour
         // Calculate direction towards mouse position
         Vector3 mousePosition = Input.mousePosition;
         mousePosition.z = 10f; // Distance of the plane from the camera
-        Vector3 aimDirection = Camera.main.ScreenToWorldPoint(mousePosition) - transform.position;
+        Vector3 aimDirection = mainCam.ScreenToWorldPoint(mousePosition) - transform.position;
         aimDirection.z = 0; // Ensure the bullet stays in the 2D plane
 
         // Instantiate bullet prefab

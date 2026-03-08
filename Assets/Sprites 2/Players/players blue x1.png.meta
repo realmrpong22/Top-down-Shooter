@@ -3,7 +3,7 @@ guid: 299e4d335450ba04497a4f08a927efcd
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 12
+  serializedVersion: 13
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -33,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -63,6 +64,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
   cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
@@ -70,11 +72,12 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -87,6 +90,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -99,6 +103,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -111,6 +116,33 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -1345,67 +1377,66 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      players blue x1_10: -340957514
-      players blue x1_20: 928700451
-      players blue x1_19: 636092449
-      players blue x1_42: -18444715
-      players blue x1_4: -1030319054
-      players blue x1_49: 53663638
-      players blue x1_27: 688066466
-      players blue x1_30: 1535971676
-      players blue x1_17: 1677448213
-      players blue x1_34: -1862481518
-      players blue x1_15: 973428770
-      players blue x1_43: 762372786
-      players blue x1_47: 1131015500
-      players blue x1_32: 585754123
-      players blue x1_12: 1795133547
-      players blue x1_50: -1776714402
-      players blue x1_1: -1656179112
-      players blue x1_14: 908044118
-      players blue x1_46: -1298562991
-      players blue x1_51: 846445780
-      players blue x1_25: -1505878504
-      players blue x1_3: -1089236223
-      players blue x1_52: 1919160788
-      players blue x1_5: -688103438
-      players blue x1_44: -2092326655
-      players blue x1_37: -1902793746
-      players blue x1_29: 1426579223
-      players blue x1_38: -995794181
-      players blue x1_35: 1783839685
-      players blue x1_16: -1675906462
-      players blue x1_48: 879527327
-      players blue x1_22: -395465038
-      players blue x1_57: 1752565407
-      players blue x1_7: 2077024331
-      players blue x1_45: 194161882
-      players blue x1_41: -146832962
-      players blue x1_55: 1495955155
-      players blue x1_6: 1532301346
-      players blue x1_56: 1433112008
-      players blue x1_54: -523375290
-      players blue x1_18: -410812325
-      players blue x1_24: -2113184928
       players blue x1_0: 778377476
-      players blue x1_39: -1012434621
-      players blue x1_28: -73006669
-      players blue x1_8: -554724927
-      players blue x1_21: 143746181
-      players blue x1_31: -436524598
-      players blue x1_13: -1295350460
+      players blue x1_1: -1656179112
+      players blue x1_10: -340957514
       players blue x1_11: -957728823
-      players blue x1_23: -1800809840
-      players blue x1_36: -70591729
-      players blue x1_40: -417116300
-      players blue x1_26: 1681786800
-      players blue x1_53: 1091104089
-      players blue x1_33: -1808593886
+      players blue x1_12: 1795133547
+      players blue x1_13: -1295350460
+      players blue x1_14: 908044118
+      players blue x1_15: 973428770
+      players blue x1_16: -1675906462
+      players blue x1_17: 1677448213
+      players blue x1_18: -410812325
+      players blue x1_19: 636092449
       players blue x1_2: 1352321610
+      players blue x1_20: 928700451
+      players blue x1_21: 143746181
+      players blue x1_22: -395465038
+      players blue x1_23: -1800809840
+      players blue x1_24: -2113184928
+      players blue x1_25: -1505878504
+      players blue x1_26: 1681786800
+      players blue x1_27: 688066466
+      players blue x1_28: -73006669
+      players blue x1_29: 1426579223
+      players blue x1_3: -1089236223
+      players blue x1_30: 1535971676
+      players blue x1_31: -436524598
+      players blue x1_32: 585754123
+      players blue x1_33: -1808593886
+      players blue x1_34: -1862481518
+      players blue x1_35: 1783839685
+      players blue x1_36: -70591729
+      players blue x1_37: -1902793746
+      players blue x1_38: -995794181
+      players blue x1_39: -1012434621
+      players blue x1_4: -1030319054
+      players blue x1_40: -417116300
+      players blue x1_41: -146832962
+      players blue x1_42: -18444715
+      players blue x1_43: 762372786
+      players blue x1_44: -2092326655
+      players blue x1_45: 194161882
+      players blue x1_46: -1298562991
+      players blue x1_47: 1131015500
+      players blue x1_48: 879527327
+      players blue x1_49: 53663638
+      players blue x1_5: -688103438
+      players blue x1_50: -1776714402
+      players blue x1_51: 846445780
+      players blue x1_52: 1919160788
+      players blue x1_53: 1091104089
+      players blue x1_54: -523375290
+      players blue x1_55: 1495955155
+      players blue x1_56: 1433112008
+      players blue x1_57: 1752565407
+      players blue x1_6: 1532301346
+      players blue x1_7: 2077024331
+      players blue x1_8: -554724927
       players blue x1_9: 1835301317
-  spritePackingTag: 
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
