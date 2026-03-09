@@ -3,7 +3,7 @@ guid: 4fd3f6da63806f2439946c37a9d7a443
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 12
+  serializedVersion: 13
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -33,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -63,6 +64,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
   cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
@@ -70,11 +72,12 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -87,6 +90,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -99,6 +103,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -111,6 +116,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -2437,119 +2443,118 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      ui x1_84: -412722550
-      ui x1_83: 138514219
-      ui x1_47: -912368454
-      ui x1_41: -547462932
-      ui x1_68: 701634307
-      ui x1_102: 377541473
-      ui x1_46: 1063084486
-      ui x1_61: -804377213
-      ui x1_87: -1289002585
-      ui x1_10: 53241213
-      ui x1_31: -2129113037
-      ui x1_85: -838394314
-      ui x1_27: -528782327
-      ui x1_39: 1917706746
-      ui x1_91: -164263106
-      ui x1_28: 406441027
-      ui x1_58: 864306748
-      ui x1_36: 651499365
-      ui x1_101: -231848290
-      ui x1_92: 888276551
-      ui x1_33: -1946688318
-      ui x1_4: 1898366937
-      ui x1_104: -1864107058
-      ui x1_12: 281626404
-      ui x1_37: -374180954
-      ui x1_8: -736316810
-      ui x1_53: -263956563
-      ui x1_82: -289592622
-      ui x1_11: -1772384257
-      ui x1_105: -180754097
-      ui x1_98: -1437894909
-      ui x1_30: -375199754
-      ui x1_3: 1504140760
-      ui x1_97: 1965869433
-      ui x1_62: 319092299
-      ui x1_80: 1010517107
-      ui x1_48: 760417481
-      ui x1_26: -1596945615
-      ui x1_56: -369567963
-      ui x1_65: -1173837657
-      ui x1_18: 2044102671
-      ui x1_22: 1732360377
-      ui x1_72: 1050045610
-      ui x1_94: 776431734
-      ui x1_90: -681507825
-      ui x1_77: 1141536668
-      ui x1_107: 1963183331
-      ui x1_78: 2086269401
-      ui x1_60: 1587881641
-      ui x1_23: -1728791582
-      ui x1_25: -1340933468
       ui x1_0: 1123036241
-      ui x1_7: -1475277893
-      ui x1_9: -887900443
-      ui x1_14: -1807604339
-      ui x1_99: 1150799832
-      ui x1_88: -1880390273
-      ui x1_89: -494235843
-      ui x1_108: -1332728990
-      ui x1_54: -1433024465
-      ui x1_50: -10716304
-      ui x1_2: -234112841
-      ui x1_34: -912396630
-      ui x1_59: 426471476
-      ui x1_24: -182661558
+      ui x1_1: -1152976870
+      ui x1_10: 53241213
       ui x1_100: 590815048
-      ui x1_76: 1227188928
-      ui x1_16: 1649124477
-      ui x1_32: 1319100217
-      ui x1_6: -68310749
-      ui x1_79: 111457407
-      ui x1_71: 1276812116
-      ui x1_64: -1849629472
-      ui x1_21: 128093775
-      ui x1_70: 948544019
-      ui x1_81: -1723352322
-      ui x1_19: 859483490
+      ui x1_101: -231848290
+      ui x1_102: 377541473
+      ui x1_103: 111713225
+      ui x1_104: -1864107058
+      ui x1_105: -180754097
+      ui x1_106: 521971385
+      ui x1_107: 1963183331
+      ui x1_108: -1332728990
+      ui x1_109: 770653549
+      ui x1_11: -1772384257
+      ui x1_12: 281626404
+      ui x1_13: -712197723
+      ui x1_14: -1807604339
       ui x1_15: -85937997
+      ui x1_16: 1649124477
+      ui x1_17: 1328442318
+      ui x1_18: 2044102671
+      ui x1_19: 859483490
+      ui x1_2: -234112841
+      ui x1_20: 355074130
+      ui x1_21: 128093775
+      ui x1_22: 1732360377
+      ui x1_23: -1728791582
+      ui x1_24: -182661558
+      ui x1_25: -1340933468
+      ui x1_26: -1596945615
+      ui x1_27: -528782327
+      ui x1_28: 406441027
       ui x1_29: 2053436053
+      ui x1_3: 1504140760
+      ui x1_30: -375199754
+      ui x1_31: -2129113037
+      ui x1_32: 1319100217
+      ui x1_33: -1946688318
+      ui x1_34: -912396630
+      ui x1_35: -800725892
+      ui x1_36: 651499365
+      ui x1_37: -374180954
+      ui x1_38: -829828640
+      ui x1_39: 1917706746
+      ui x1_4: 1898366937
+      ui x1_40: 408841202
+      ui x1_41: -547462932
+      ui x1_42: 425013980
+      ui x1_43: 826420961
       ui x1_44: -1820552172
       ui x1_45: 529791430
-      ui x1_73: 1404516206
-      ui x1_95: -952892934
-      ui x1_51: 1757647731
-      ui x1_103: 111713225
-      ui x1_69: 644284924
-      ui x1_17: 1328442318
-      ui x1_42: 425013980
+      ui x1_46: 1063084486
+      ui x1_47: -912368454
+      ui x1_48: 760417481
+      ui x1_49: -328486574
       ui x1_5: -1071763203
+      ui x1_50: -10716304
+      ui x1_51: 1757647731
+      ui x1_52: 906756206
+      ui x1_53: -263956563
+      ui x1_54: -1433024465
+      ui x1_55: -293789543
+      ui x1_56: -369567963
+      ui x1_57: -602385206
+      ui x1_58: 864306748
+      ui x1_59: 426471476
+      ui x1_6: -68310749
+      ui x1_60: 1587881641
+      ui x1_61: -804377213
+      ui x1_62: 319092299
+      ui x1_63: 550444864
+      ui x1_64: -1849629472
+      ui x1_65: -1173837657
+      ui x1_66: 839854553
+      ui x1_67: -499619218
+      ui x1_68: 701634307
+      ui x1_69: 644284924
+      ui x1_7: -1475277893
+      ui x1_70: 948544019
+      ui x1_71: 1276812116
+      ui x1_72: 1050045610
+      ui x1_73: 1404516206
       ui x1_74: 1121845622
       ui x1_75: 1835836452
+      ui x1_76: 1227188928
+      ui x1_77: 1141536668
+      ui x1_78: 2086269401
+      ui x1_79: 111457407
+      ui x1_8: -736316810
+      ui x1_80: 1010517107
+      ui x1_81: -1723352322
+      ui x1_82: -289592622
+      ui x1_83: 138514219
+      ui x1_84: -412722550
+      ui x1_85: -838394314
       ui x1_86: 758195808
+      ui x1_87: -1289002585
+      ui x1_88: -1880390273
+      ui x1_89: -494235843
+      ui x1_9: -887900443
+      ui x1_90: -681507825
+      ui x1_91: -164263106
+      ui x1_92: 888276551
       ui x1_93: -1622065740
-      ui x1_40: 408841202
-      ui x1_67: -499619218
-      ui x1_13: -712197723
-      ui x1_63: 550444864
+      ui x1_94: 776431734
+      ui x1_95: -952892934
       ui x1_96: -1023149014
-      ui x1_38: -829828640
-      ui x1_66: 839854553
-      ui x1_43: 826420961
-      ui x1_52: 906756206
-      ui x1_35: -800725892
-      ui x1_1: -1152976870
-      ui x1_57: -602385206
-      ui x1_20: 355074130
-      ui x1_49: -328486574
-      ui x1_55: -293789543
-      ui x1_109: 770653549
-      ui x1_106: 521971385
-  spritePackingTag: 
+      ui x1_97: 1965869433
+      ui x1_98: -1437894909
+      ui x1_99: 1150799832
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

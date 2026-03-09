@@ -1,11 +1,14 @@
 using UnityEngine;
+using TMPro;
+using System.Collections;
 
 public class WaveManager : MonoBehaviour
 {
-    [SerializeField] GameObject enemyPrefab;
+    [SerializeField] Wave[] waves;
     [SerializeField] Transform[] spawnPoints;
+    [SerializeField] TextMeshProUGUI waveText;
 
-    int waveNumber = 0;
+    int currentWave = 0;
     int enemiesAlive = 0;
 
     void Start()
@@ -15,23 +18,40 @@ public class WaveManager : MonoBehaviour
 
     void StartWave()
     {
-        waveNumber++;
-
-        int enemiesToSpawn = 3 + waveNumber * 2;
-
-        for (int i = 0; i < enemiesToSpawn; i++)
+        if (currentWave >= waves.Length)
         {
-            Transform spawn = spawnPoints[Random.Range(0, spawnPoints.Length)];
-
-            GameObject enemy = Instantiate(enemyPrefab, spawn.position, Quaternion.identity);
-
-            Health health = enemy.GetComponent<Health>();
-            health.onDeath.AddListener(OnEnemyDeath);
-
-            enemiesAlive++;
+            Debug.Log("All waves complete!");
+            return;
         }
 
-        Debug.Log("Wave " + waveNumber + " started with " + enemiesToSpawn + " enemies.");
+        waveText.text = "WAVE " + (currentWave + 1);
+        waveText.gameObject.SetActive(true);
+
+        StartCoroutine(SpawnWaveCoroutine());
+    }
+
+    IEnumerator SpawnWaveCoroutine()
+    {
+        yield return new WaitForSeconds(1f);
+
+        Wave wave = waves[currentWave];
+
+        foreach (EnemySpawn spawn in wave.enemies)
+        {
+            for (int i = 0; i < spawn.count; i++)
+            {
+                Transform spawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
+
+                GameObject enemy = Instantiate(spawn.enemyPrefab, spawnPoint.position, Quaternion.identity);
+
+                Health health = enemy.GetComponent<Health>();
+                health.onDeath.AddListener(OnEnemyDeath);
+
+                enemiesAlive++;
+            }
+        }
+
+        currentWave++;
     }
 
     void OnEnemyDeath()

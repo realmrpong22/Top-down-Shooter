@@ -59,7 +59,12 @@ public class Health : MonoBehaviour
             else if (gameObject.tag == "Enemy")
             {
                 GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-                GetComponent<EnemyMovement>().enabled = false;
+
+                var movement = GetComponent<EnemyMovement>();
+                if (movement != null) movement.enabled = false;
+
+                var bigEnemy = GetComponent<BigEnemy>();
+                if (bigEnemy != null) bigEnemy.enabled = false;
             }
             GetComponent<CapsuleCollider2D>().enabled = false;
 
