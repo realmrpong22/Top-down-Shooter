@@ -245,7 +245,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 0
   maxHealth: 50
-  iFrameDuration: 0
+  iFrameDuration: 0.3
   healthBar: {fileID: 8959480386476030702}
   onDeath:
     m_PersistentCalls:

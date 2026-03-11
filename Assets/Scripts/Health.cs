@@ -13,12 +13,18 @@ public class Health : MonoBehaviour
 
     Animator animator;
 
+    SpriteRenderer spriteRenderer;
+
+    Color originalColor;
+
     public UnityEvent onDeath;
     public bool iFrame {  get; set; }
 
     void Start()
     {
-        animator = GetComponent<Animator>();    
+        animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        originalColor = spriteRenderer.color;
         currentHealth = maxHealth;
     }
 
@@ -100,7 +106,9 @@ public class Health : MonoBehaviour
     IEnumerator IFrameCoroutine(float duration)
     {
         iFrame = true;
+        spriteRenderer.color = Color.red;
         yield return new WaitForSeconds(duration);
         iFrame = false;
+        spriteRenderer.color = originalColor;
     }
 }

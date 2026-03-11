@@ -11,6 +11,8 @@ public class Bullet : MonoBehaviour
 
     public float damage = 10f;
 
+    public int pierceRemaining = 0;
+
     private void Start()
     {
         Destroy(gameObject, 3f);
@@ -18,14 +20,29 @@ public class Bullet : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Enemy")
+        if (collision.CompareTag("Enemy"))
         {
-            Health health = collision.gameObject.GetComponent<Health>();
-            health.ReduceHealth(damage);
+            Health health = collision.GetComponent<Health>();
+
+            if (health != null)
+            {
+                health.ReduceHealth(damage);
+            }
+
+            if (pierceRemaining > 0)
+            {
+                pierceRemaining--;
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
+        }
+
+        if (collision.CompareTag("Wall"))
+        {
             Destroy(gameObject);
         }
-        if (collision.tag == "Wall")
-            Destroy(gameObject);
     }
 
     void OnCollisionEnter2D(Collision2D collision)
