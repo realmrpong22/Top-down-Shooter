@@ -16,7 +16,7 @@ public class WaveManager : MonoBehaviour
         StartWave();
     }
 
-    void StartWave()
+    public void StartWave()
     {
         if (currentWave >= waves.Length)
         {
@@ -36,6 +36,8 @@ public class WaveManager : MonoBehaviour
 
         Wave wave = waves[currentWave];
 
+        enemiesAlive = 0;
+
         foreach (EnemySpawn spawn in wave.enemies)
         {
             for (int i = 0; i < spawn.count; i++)
@@ -45,22 +47,35 @@ public class WaveManager : MonoBehaviour
                 GameObject enemy = Instantiate(spawn.enemyPrefab, spawnPoint.position, Quaternion.identity);
 
                 Health health = enemy.GetComponent<Health>();
-                health.onDeath.AddListener(OnEnemyDeath);
+                health.onDeath.AddListener(() => OnEnemyDeath(enemy));
 
                 enemiesAlive++;
             }
         }
-
-        currentWave++;
     }
 
-    void OnEnemyDeath()
+    void OnEnemyDeath(GameObject enemy)
     {
+        if (!enemy.CompareTag("Enemy"))
+            return;
+
         enemiesAlive--;
+
+        Debug.Log("Enemy died. Remaining: " + enemiesAlive);
 
         if (enemiesAlive <= 0)
         {
-            Invoke(nameof(StartWave), 2f);
+            currentWave++;
+            UpgradeUI upgradeUI = FindObjectOfType<UpgradeUI>();
+
+            if (upgradeUI != null)
+            {
+                upgradeUI.ShowUpgrades();
+            }
+            else
+            {
+                Debug.LogError("UpgradeUI not found in scene!");
+            }
         }
     }
 }

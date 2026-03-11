@@ -20,6 +20,8 @@ public class Health : MonoBehaviour
     public UnityEvent onDeath;
     public bool iFrame {  get; set; }
 
+    bool isDead = false;
+
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -45,6 +47,9 @@ public class Health : MonoBehaviour
             return;
         }
 
+        if (isDead)
+            return;
+
         currentHealth -= health;
         if (currentHealth < 0)
         {
@@ -53,6 +58,7 @@ public class Health : MonoBehaviour
 
         if (currentHealth == 0)
         {
+            isDead = true;
             onDeath?.Invoke();
 
             animator.SetBool("isMoving", false);
@@ -96,6 +102,13 @@ public class Health : MonoBehaviour
         {
             currentHealth = maxHealth;
         }
+    }
+
+    public void AddMaxHealth(float health)
+    {
+        maxHealth += health;
+
+        currentHealth = Mathf.Min(maxHealth, currentHealth + health);
     }
 
     public void StartIFrame(float duration)

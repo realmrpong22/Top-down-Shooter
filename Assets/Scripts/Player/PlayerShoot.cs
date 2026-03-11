@@ -68,6 +68,11 @@ public class PlayerShoot : MonoBehaviour
         }
     }
 
+    public float GetCooldownRatio()
+    {
+        return Mathf.Clamp01(shootCooldownTimer / stats.shotDelay);
+    }
+
     void OnFire(InputValue inputValue)
     {
         continuousShoot = inputValue.isPressed;
