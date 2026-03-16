@@ -5,6 +5,10 @@ public class UpgradeManager : MonoBehaviour
     PlayerStats playerStats;
     Health playerHealth;
 
+    int spreadShotCount = 0;
+    int pierceCount = 0;
+    int rapidFireCount = 0;
+
     void Start()
     {
         playerStats = FindObjectOfType<PlayerStats>();
@@ -23,7 +27,7 @@ public class UpgradeManager : MonoBehaviour
                 playerStats.bulletDamage += 5f;
                 break;
 
-            case UpgradeType.DoubleShot:
+            case UpgradeType.SpreadShot:
                 playerStats.bulletCount += 1;
                 break;
 
@@ -38,6 +42,23 @@ public class UpgradeManager : MonoBehaviour
             case UpgradeType.Heal:
                 playerHealth.AddHealth(30);
                 break;
+        }
+    }
+
+    public bool CanOfferUpgrade(UpgradeType type)
+    {
+        switch (type)
+        {
+            case UpgradeType.RapidFire:
+                return rapidFireCount < 3;
+            case UpgradeType.SpreadShot:
+                return spreadShotCount < 2;
+            case UpgradeType.Piercing:
+                return pierceCount < 1;
+            case UpgradeType.Heal:
+                return playerHealth.healthPercentage < 1;
+            default:
+                return false;
         }
     }
 }

@@ -2,7 +2,7 @@ public enum UpgradeType
 {
     RapidFire,
     PowerShot,
-    DoubleShot,
+    SpreadShot,
     Piercing,
     MaxHealth,
     Heal
